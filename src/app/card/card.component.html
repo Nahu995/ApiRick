@@ -1,0 +1,35 @@
+<div class="container-cards" *ngIf="character">
+    <article class="character-card">
+      <div class="card-header">
+        <div class="card-image">
+          <img [src]='character.image' alt="">
+        </div>
+        <div class="character-card-info">
+          <a href="/character/{{character.id}}"><h2 class="title">{{character.name}}</h2></a>
+          <p>id: {{character.id}} - created 2 years ago</p>
+        </div>
+      </div>
+      <div class="card-info">
+        <div>
+          <span>STATUS</span>
+          <p>{{character.status}}</p>
+        </div>
+        <div>
+          <span>SPECIES</span>
+          <p>{{character.species}}</p>
+        </div>
+        <div>
+          <span>GENDER</span>
+          <p>{{character.gender}}</p>
+        </div>
+        <div>
+          <span>ORIGIN</span>
+          <p>{{character.origin.name}}</p>
+        </div>
+        <div>
+          <span>LAST LOCATION</span>
+          <p>{{character.location.name}}</p>
+        </div>
+      </div>
+    </article>
+  </div>

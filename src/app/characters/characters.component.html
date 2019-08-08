@@ -1,0 +1,21 @@
+<!-- <button (click)="onReset()">RICK</button> -->
+<app-header></app-header>
+<div class="container-pagination" *ngIf="characters && characters.length > 8"> 
+  <ul class="pagination">
+    <li class="pagination-next">
+      <a *ngIf="currentPage == 1" routerLink="/characters/{{currentPage}}"><span>Previous</span></a>
+      <a *ngIf="currentPage > 1" routerLink="/characters/{{currentPage - 1}}"><span>Previous</span></a>
+    </li>
+    <li class="pages" *ngFor="let page of pagination">
+      <a routerLink="/characters/{{page}}">{{page}}</a>
+    </li>
+    <li class="pagination-next">
+      <a *ngIf="25==currentPage" routerLink="/characters/{{currentPage}}"><span>Next</span></a>      
+      <a *ngIf="25>currentPage" routerLink="/characters/{{currentPage + 1}}"><span>Next</span></a>
+    </li>
+  </ul>
+</div>
+
+<section class="container-characters">
+  <app-card *ngFor="let character of characters" [character]="character"></app-card>    
+</section>

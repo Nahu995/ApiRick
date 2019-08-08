@@ -1,0 +1,17 @@
+<div *ngIf="flagHeader">
+  <app-header ></app-header>
+</div>
+<h2>Episodes</h2>
+<section class="seasons">
+  <div *ngFor="let season of seasons; let i = index">
+    <div class="season" *ngIf="season.length">
+      <h3 *ngIf="season.length">Season {{i+1}}</h3>
+      <ul *ngFor="let chapter of season">
+        <li>
+          <a routerLink="/episodes/{{chapter.id}}"><span>{{chapter.name}}</span></a>
+        </li>
+      </ul>
+    </div >
+  </div>
+
+</section>

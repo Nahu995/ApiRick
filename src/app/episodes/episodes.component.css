@@ -1,0 +1,46 @@
+*{
+  text-decoration: none;
+  background-color: rgb(32, 35, 41);
+}
+h2{
+  color:	#e89ac7;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+h3{
+  color:#e4a788;
+}
+h3:hover{
+  text-decoration: underline;
+  text-decoration-color: #e4a788
+}
+.seasons{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1.2rem;
+  /* justify-content: space-around */
+}
+.seasons > div{
+  display: inline-flex;
+  padding-right: 10%
+}
+.season{
+  width: 330px;
+  padding: 0.3rem;
+}
+.season > ul{
+  padding-left: 17px;
+  color: #97ce4c;
+}
+.season > ul > li{
+  padding: 0.33em;
+}
+span{
+  color: #97ce4c;  
+}
+ul>li:hover{
+  color: #e89ac7;
+}
+span:hover{
+  color: #f0e14a;
+}
